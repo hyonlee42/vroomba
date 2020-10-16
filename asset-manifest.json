@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hyonlee42/vroomba/static/css/main.5f361e03.chunk.css",
+    "main.js": "/hyonlee42/vroomba/static/js/main.6cf927fc.chunk.js",
+    "main.js.map": "/hyonlee42/vroomba/static/js/main.6cf927fc.chunk.js.map",
+    "runtime-main.js": "/hyonlee42/vroomba/static/js/runtime-main.31df73a0.js",
+    "runtime-main.js.map": "/hyonlee42/vroomba/static/js/runtime-main.31df73a0.js.map",
+    "static/js/2.d5fc2c46.chunk.js": "/hyonlee42/vroomba/static/js/2.d5fc2c46.chunk.js",
+    "static/js/2.d5fc2c46.chunk.js.map": "/hyonlee42/vroomba/static/js/2.d5fc2c46.chunk.js.map",
+    "index.html": "/hyonlee42/vroomba/index.html",
+    "precache-manifest.b2cb9406c6208c4f36e4829b4869b8c7.js": "/hyonlee42/vroomba/precache-manifest.b2cb9406c6208c4f36e4829b4869b8c7.js",
+    "service-worker.js": "/hyonlee42/vroomba/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/hyonlee42/vroomba/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.d5fc2c46.chunk.js.LICENSE.txt": "/hyonlee42/vroomba/static/js/2.d5fc2c46.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/hyonlee42/vroomba/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.31df73a0.js",
+    "static/js/2.d5fc2c46.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.6cf927fc.chunk.js"
+  ]
+}
