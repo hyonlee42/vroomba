@@ -19,7 +19,8 @@
     "react-scripts": "3.4.3",
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.5.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "timeout-as-promise": "^1.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",

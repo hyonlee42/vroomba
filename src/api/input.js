@@ -1,0 +1,67 @@
+//Valid input has at least 2 lines with numbers, followed by directions, and sets max digit size  
+const validateTextInput = textinput => {  
+  const inputRegExp = /^([0-9]{1,10} [0-9]{1,10}(\r\n|\n|\r)){2,}([NSWE]+)$/;
+  const isMatch = inputRegExp.test(textinput);
+  return isMatch;
+};
+
+export const parseInput = textinput => {
+  if (validateTextInput(textinput)) {
+    const inputLines = textinput.split("\n");
+
+    const roomState = {
+      roomSize: inputLines[0].split(" ").map(num => +num),
+      robotPosition: inputLines[1].split(" ").map(num => +num),
+      directions: inputLines[inputLines.length - 1].split(""),
+      dirtLocations: inputLines
+        .slice(2, inputLines.length - 1)
+        .map(line => line.split(" ").map(num => +num)),
+      isInputValid: true
+    };
+
+    const maxX = roomState.roomSize[0];
+    const maxY = roomState.roomSize[1];
+
+    const isRobotPositionOufOfBounds =
+      roomState.robotPosition[0] >= maxX || roomState.robotPosition[1] >= maxY;
+
+    if (isRobotPositionOufOfBounds)
+      return {
+        isInputValid: false,
+        errorMessage:
+          "Out of bounds, stay in your lane vroomba"
+      };
+
+    const isDirtLocationsOutofBounds = roomState.dirtLocations.some(
+      coord => coord[0] >= maxX || coord[1] >= maxY
+    );
+
+    if (isDirtLocationsOutofBounds)
+      return {
+        isInputValid: false,
+        errorMessage:
+          "One or more dirt patch locations are out of bounds."
+      };
+
+    const locationsSet = new Set(
+      roomState.dirtLocations.map(coord => coord[0] + "-" + coord[1])
+    ).add(roomState.robotPosition[0] + "-" + roomState.robotPosition[1]);
+
+    const hasOverlappingPositions =
+      locationsSet.size !== roomState.dirtLocations.length + 1;
+
+    if (hasOverlappingPositions)
+      return {
+        isInputValid: false,
+        errorMessage:
+          "One or more locations overlap."
+      };
+
+    return roomState;
+  } else
+    return {
+      isInputValid: false,
+      errorMessage:
+        "Unable to parse input text."
+    };
+};
