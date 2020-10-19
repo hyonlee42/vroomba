@@ -1,6 +1,6 @@
-#import * as types from "../actions/ActionTypes";
+import * as types from "../events/directional_movement";
 
-#const initialState = {
+const initialState = {
   removedDirtCount: 0,
   dirtLocations: [],
   robotPosition: [0, 0],
@@ -9,7 +9,7 @@
   hasCompletedAnimation: false
 };
 
-#const robotConfiguration = (state = initialState, action) => {
+const robot_configuration = (state = initialState, action) => {
   switch (action.type) {
     case types.SET_ROBOT_COORDINATES:
       return { ...state, robotPosition: action.robotPosition };
@@ -58,4 +58,4 @@
   }
 };
 
-#export default robotConfiguration;
+export default robot_configuration;

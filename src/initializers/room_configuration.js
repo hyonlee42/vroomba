@@ -1,6 +1,6 @@
-#import * as types from "../actions/ActionTypes";
+import * as types from "../events/directional_movement";
 
-#const initialState = {
+const initialState = {
   inputFileName: "input.txt",
   isFetching: true,
   inputTextValue: "Loading...",
@@ -8,7 +8,7 @@
   isInputValid: true
 };
 
-#const roomConfiguration = (state = initialState, action) => {
+const room_configuration = (state = initialState, action) => {
   switch (action.type) {
     case types.REQUEST_INPUT_FILE:
       return state;
@@ -39,4 +39,4 @@
   }
 };
 
-#export default roomConfiguration;
+export default room_configuration;
