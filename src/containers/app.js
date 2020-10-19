@@ -6,8 +6,8 @@ import { connect } from "react-redux";
 import { fetchInputFile } from "../events/event_creator";
 import PropTypes from "prop-types";
 
-import "./App.css";
-import { parseStateFromText } from "../events/event_creators";
+import "./app.css";
+import { parseStateFromText } from "../events/event_creator";
 
 export class App extends Component {
   componentDidMount() {
@@ -51,7 +51,7 @@ export class App extends Component {
               hasCompletedAnimation={this.props.hasCompletedAnimation}
             />
           </div>
-          <ResultOutput
+          <result_output
             robotPosition={this.props.robotPosition}
             removedDirtCount={this.props.removedDirtCount}
           />
